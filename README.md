@@ -5,11 +5,15 @@
 BadCerts is a [Go](https://golang.org) library to deal with bad ssl cert(s)
 (e.g. self-signed certificates).
 
-**NOTE**: For self-signed certs a better way to deal with is to use
+**NOTE**: For self-signed certs, a better approach to deal with them is to use
 [`x509.CertPool`](https://godoc.org/crypto/x509#CertPool),
-an example can be found
-[here](https://www.reddit.com/r/golang/comments/8prc19/a_go_library_to_deal_with_bad_https_certs/e0dmnzp/).
-This library is still kinda useful to deal with other types of bad certs.
+which is faster than using BadCerts library.
+An example can be found
+[here](https://github.com/fishy/blynk-proxy/blob/741ab221c0624d8b522428f7ac0958584c6d2a1f/main.go#L59-L77)
+(Thanks to
+[/u/loosecanonsandvich](https://www.reddit.com/r/golang/comments/8prc19/a_go_library_to_deal_with_bad_https_certs/e0dmnzp/)).
+BadCerts library is still kinda useful to deal with other types of bad certs,
+like expired certs or certs with wrong common names.
 
 ## Example
 
