@@ -5,6 +5,12 @@
 BadCerts is a [Go](https://golang.org) library to deal with bad ssl cert(s)
 (e.g. self-signed certificates).
 
+NOTE: For self-signed certs a better way to deal with is to use
+[`x509.CertPool`](https://godoc.org/crypto/x509#CertPool),
+an example can be found
+[here](https://www.reddit.com/r/golang/comments/8prc19/a_go_library_to_deal_with_bad_https_certs/e0dmnzp/).
+This library is still useful to deal with other types of bad certs.
+
 ## Example
 
 ```go
@@ -40,7 +46,7 @@ but then you won't know if it's replaced by a different, malicious MITM cert.
 Or you could use the same http client with sites with legit certs and now you
 are losing protection.
 
-badcerts library still have all the normal certificate verification protections,
+BadCerts library still have all the normal certificate verification protections,
 it just trust the whitelisted certificate(s) additionally, but nothing more.
 
 ### How do I get the fingerprint for my self-signed cert?
