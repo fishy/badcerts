@@ -10,7 +10,7 @@ import (
 // First it tries standard tls.Dial.
 // If nothing is wrong, it returns the result directly.
 //
-// If the error is self-signed cert, it dials again without cert verification,
+// If the error satisfies errorFunc, it dials again without cert verification,
 // then checks the fingerprint of the cert against the given certs.
 // If the fingerprint matches it returns the connection without error,
 // otherwise it returns the original self-signed cert error.
