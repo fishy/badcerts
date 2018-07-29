@@ -1,4 +1,5 @@
 [![GoDoc](https://godoc.org/github.com/fishy/badcerts?status.svg)](https://godoc.org/github.com/fishy/badcerts)
+[![Go Report Card](https://goreportcard.com/badge/github.com/fishy/badcerts)](https://goreportcard.com/report/github.com/fishy/badcerts)
 
 # BadCerts
 

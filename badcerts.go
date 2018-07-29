@@ -13,10 +13,10 @@ import (
 // If the error satisfies errorFunc, it dials again without cert verification,
 // then checks the fingerprint of the cert against the given certs.
 // If the fingerprint matches it returns the connection without error,
-// otherwise it returns the original self-signed cert error.
+// otherwise it returns the original error when calling standard tls.Dial.
 //
 // As a result this function works with all the standard trusted root CAs plus
-// the ones with matching cert fingerprint, and nothing else.
+// the ones with matching cert fingerprints, and nothing else.
 func DialTLSWithWhitelistCerts(
 	certFingerprints []string,
 	errorFunc ErrorFunc,
