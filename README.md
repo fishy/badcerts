@@ -1,4 +1,4 @@
-[![GoDoc](https://godoc.org/github.com/fishy/badcerts?status.svg)](https://godoc.org/github.com/fishy/badcerts)
+[![GoDoc](https://godoc.org/github.com/fishy/badcerts?status.svg)](https://pkg.go.dev/github.com/fishy/badcerts?tab=doc)
 [![Go Report Card](https://goreportcard.com/badge/github.com/fishy/badcerts)](https://goreportcard.com/report/github.com/fishy/badcerts)
 
 # BadCerts
@@ -24,9 +24,9 @@ myCertFingerprint := "9SLklscvzMYj8f+52lp5ze/hY0CFHyLSPQzSpYYIBm8="
 
 client := &http.Client{
 	Transport: &http.Transport{
-		DialTLS: badcerts.DialTLSWithWhitelistCert(
-			myCertFingerprint,
+		DialTLS: badcerts.DialTLSWithWhitelistCerts(
 			badcerts.IsSelfSignedError,
+			myCertFingerprint,
 		),
 	},
 }

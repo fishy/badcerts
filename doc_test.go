@@ -8,13 +8,18 @@ import (
 
 func Example() {
 	// This is the cert fingerprint from https://self-signed.badssl.com/
+	//
+	// You can get it by:
+	//
+	//     go get -u github.com/fishy/badcerts/cmd/badcerts-fingerprint
+	//     badcerts-fingerprint -url https://self-signed.badssl.com/
 	myCertFingerprint := "9SLklscvzMYj8f+52lp5ze/hY0CFHyLSPQzSpYYIBm8="
 
 	client := &http.Client{
 		Transport: &http.Transport{
-			DialTLS: badcerts.DialTLSWithWhitelistCert(
-				myCertFingerprint,
+			DialTLS: badcerts.DialTLSWithWhitelistCerts(
 				badcerts.IsSelfSignedError,
+				myCertFingerprint,
 			),
 		},
 	}

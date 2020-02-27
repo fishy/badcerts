@@ -18,10 +18,10 @@ import (
 // As a result this function works with all the standard trusted root CAs plus
 // the ones with matching cert fingerprints, and nothing else.
 func DialTLSWithWhitelistCerts(
-	certFingerprints []string,
 	errorFunc ErrorFunc,
+	certFingerprints ...string,
 ) func(network, addr string) (net.Conn, error) {
-	fingerprints := make(map[string]bool)
+	fingerprints := make(map[string]bool, len(certFingerprints))
 	for _, fingerprint := range certFingerprints {
 		fingerprints[fingerprint] = true
 	}
@@ -56,12 +56,4 @@ func DialTLSWithWhitelistCerts(
 
 		return conn, err
 	}
-}
-
-// DialTLSWithWhitelistCert is the singular form of DialTLSWithWhitelistCerts.
-func DialTLSWithWhitelistCert(
-	certFingerprint string,
-	errorFunc ErrorFunc,
-) func(network, addr string) (net.Conn, error) {
-	return DialTLSWithWhitelistCerts([]string{certFingerprint}, errorFunc)
 }

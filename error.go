@@ -2,6 +2,7 @@ package badcerts
 
 import (
 	"crypto/x509"
+	"errors"
 )
 
 // ErrorFunc defines the function to determine whether an error is cert error
@@ -12,6 +13,5 @@ type ErrorFunc func(err error) bool
 
 // IsSelfSignedError is an ErrorFunc returns true for self-signed certs.
 func IsSelfSignedError(err error) bool {
-	_, ok := err.(x509.UnknownAuthorityError)
-	return ok
+	return errors.As(err, new(x509.UnknownAuthorityError))
 }
