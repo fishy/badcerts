@@ -44,7 +44,7 @@ func main() {
 		},
 	}
 
-	_, err := client.Get(*url)
+	_, err := client.Head(*url)
 	if err != nil {
 		panic(err)
 	}
