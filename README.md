@@ -7,7 +7,7 @@ BadCerts is a [Go](https://golang.org) library to deal with bad ssl cert(s)
 (e.g. self-signed certificates).
 
 **NOTE**: For self-signed certs, a better approach to deal with them is to use
-[`x509.CertPool`](https://godoc.org/crypto/x509#CertPool),
+[`x509.CertPool`](https://pkg.go.dev/crypto/x509#CertPool),
 which is faster than using BadCerts library.
 An example can be found
 [here](https://github.com/fishy/blynk-proxy/blob/741ab221c0624d8b522428f7ac0958584c6d2a1f/main.go#L59-L77)
@@ -57,7 +57,7 @@ it just trust the whitelisted certificate(s) additionally, but nothing more.
 ### How do I get the fingerprint for my self-signed cert?
 
 It comes with a command line tool
-[badcerts-fingerprint](https://godoc.org/github.com/fishy/badcerts/cmd/badcerts-fingerprint).
+[badcerts-fingerprint](https://pkg.go.dev/github.com/fishy/badcerts/cmd/badcerts-fingerprint).
 
 ### Aren't those certs bad?
 
