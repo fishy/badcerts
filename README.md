@@ -1,4 +1,4 @@
-[![GoDoc](https://godoc.org/github.com/fishy/badcerts?status.svg)](https://pkg.go.dev/github.com/fishy/badcerts?tab=doc)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/fishy/badcerts)](https://pkg.go.dev/github.com/fishy/badcerts)
 [![Go Report Card](https://goreportcard.com/badge/github.com/fishy/badcerts)](https://goreportcard.com/report/github.com/fishy/badcerts)
 
 # BadCerts
