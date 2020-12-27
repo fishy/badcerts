@@ -3,7 +3,7 @@ package badcerts_test
 import (
 	"net/http"
 
-	"github.com/fishy/badcerts"
+	"go.yhsif.com/badcerts"
 )
 
 func Example() {
@@ -11,7 +11,7 @@ func Example() {
 	//
 	// You can get it by:
 	//
-	//     go get -u github.com/fishy/badcerts/cmd/badcerts-fingerprint
+	//     go get -u go.yhsif.com/badcerts/cmd/badcerts-fingerprint
 	//     badcerts-fingerprint -url https://self-signed.badssl.com/
 	myCertFingerprint := "9SLklscvzMYj8f+52lp5ze/hY0CFHyLSPQzSpYYIBm8="
 

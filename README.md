@@ -1,5 +1,5 @@
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/fishy/badcerts)](https://pkg.go.dev/github.com/fishy/badcerts)
-[![Go Report Card](https://goreportcard.com/badge/github.com/fishy/badcerts)](https://goreportcard.com/report/github.com/fishy/badcerts)
+[![PkgGoDev](https://pkg.go.dev/badge/go.yhsif.com/badcerts)](https://pkg.go.dev/go.yhsif.com/badcerts)
+[![Go Report Card](https://goreportcard.com/badge/go.yhsif.com/badcerts)](https://goreportcard.com/report/go.yhsif.com/badcerts)
 
 # BadCerts
 
@@ -57,7 +57,7 @@ it just trust the whitelisted certificate(s) additionally, but nothing more.
 ### How do I get the fingerprint for my self-signed cert?
 
 It comes with a command line tool
-[badcerts-fingerprint](https://pkg.go.dev/github.com/fishy/badcerts/cmd/badcerts-fingerprint).
+[badcerts-fingerprint](https://pkg.go.dev/go.yhsif.com/badcerts/cmd/badcerts-fingerprint).
 
 ### Aren't those certs bad?
 
@@ -68,3 +68,7 @@ This is more for the sites you cannot control and have to deal with.
 ## Acknowledges
 
 This library is inspired by [tam7t/hpkp](https://github.com/tam7t/hpkp)
+
+## License
+
+[BSD 3-Clause](LICENSE).

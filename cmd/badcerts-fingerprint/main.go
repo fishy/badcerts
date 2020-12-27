@@ -7,7 +7,7 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/fishy/badcerts"
+	"go.yhsif.com/badcerts"
 )
 
 var url = flag.String("url", "", "url to get cert fingerprint(s)")

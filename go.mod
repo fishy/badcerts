@@ -1,3 +1,3 @@
-module github.com/fishy/badcerts
+module go.yhsif.com/badcerts
 
-go 1.14
+go 1.15

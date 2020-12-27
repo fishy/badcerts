@@ -7,4 +7,4 @@
 // common name, etc.) cert(s) because you have to. ¯\_(ツ)_/¯
 //
 // This library is inspired by https://github.com/tam7t/hpkp
-package badcerts
+package badcerts // import "go.yhsif.com/badcerts"
